@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background: rgba(255,255,255, 0.9);
+    --coloroff:rgb(159, 191, 252);
+    --coloron: rgb(52, 102, 146);
+    --colorTexto: rgb(211, 195, 49);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/route-66-392753.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+}
+.form-estados{
+    background: var(--background);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+.banner__form-estados{
+    display: flex;
+    align-items: center;
+    height: 18vh;
+    padding: 20px 20px 0 20px;
+    position: relative;
+}
+.banner__form-estados::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/map-455769_1280.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+}
+.title__form-estados{
+    margin-bottom: 0.46875em;
+    font-family: 'Pacifico', cursive;
+    color: var(--colorTexto);
+    position: relative;
+    text-shadow: 0 0 2px #000,
+                0 0 2px #000,
+                0 0 2px #000;
+}
+.etiqueta__form-estados{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    margin-bottom: 0.2083em;
+    color: rgb(52, 102, 146);
+    padding: 20px;
+}
+.cont__form-estados.select{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0.625em;
+    padding: 0 20px;
+}
+.select__form-estados{
+    border: none;
+    border-bottom: solid 2px var(--coloroff);
+    background: transparent;
+    font-size: 1em;
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.select__form-estados option{
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    padding: 3px;
+}
+.select__form-estados:hover{
+    border-bottom: solid 2px var(--coloron);
+}
+.select__form-estados:hover .icon__form-estados{
+    color: var(--coloron);
+}
+.icon__form-estados{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    margin-right: 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: var(--coloroff);
+}
+.icon__form-estados:hover{
+    color: var(--coloron);
+}
+.btn__form-estados{
+    font-size: 1.3em;
+    font-family: 'Pacifico', cursive;
+    width: calc(100% - 40px);
+    text-align: center;
+    margin: 1em auto;
+    border: solid 2px var(--coloroff);
+    color: var(--coloron);
+    padding: 5px 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn__form-estados.on{
+    background: var(--coloron);
+    color: #fff;;
+}
+.btn__form-estados.on:active{
+    transform: scale(.9);
+}
+.btn__form-estados.on:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+input[type="submit"]{
+    display: none;
+}
